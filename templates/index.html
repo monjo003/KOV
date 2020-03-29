@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY" async="" defer="defer"></script>
+    <script src="{{ url_for('static', filename="chart.js")}}"></script>
+  </head>
+  <body>
+    <div id="total-conformed"> <h2> Total conformed cases in Ethiopia: {{ totalConf }} </h2> </div>
+    <div id="regions_div" style="border: 1px solid #ccc"></div>
+    <div id="chart_div" style="border: 1px solid #ccc"></div>
+    <!-- <script src="api.py"></script> -->
+  </body>
+</html>
