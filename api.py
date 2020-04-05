@@ -1,12 +1,20 @@
 from flask import Flask, render_template
 import requests
+import json
+
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
+ 
+with open("credentials.json", "r") as f:
+    my_dict = json.load(f)
+    map_api_key = my_dict["credentials"]["MAPS_API"]
+# print(map_api_key)    
 
 @app.route('/', methods=['GET'])
 def home():
+   
     country = "ethiopia"
     url = "https://coronavirus-19-api.herokuapp.com/countries/" + country
     
@@ -24,9 +32,9 @@ def home():
     totalTests = req_data['totalTests']
     testsPerOneMillion = req_data['testsPerOneMillion']
 
-    print(cases)
+    # print(map_api_key)
 
-    return render_template('index.html', country = country, cases = cases, todayCases = todayCases, deaths = deaths, todayDeaths = todayDeaths, recovered = recovered, active = active, critical = critical, casesPerOneMillion = casesPerOneMillion, deathsPerOneMillion = deathsPerOneMillion, totalTests=totalTests, testsPerOneMillion = testsPerOneMillion  )
+    return render_template('index.html', map_api_key = map_api_key, country = country, cases = cases, todayCases = todayCases, deaths = deaths, todayDeaths = todayDeaths, recovered = recovered, active = active, critical = critical, casesPerOneMillion = casesPerOneMillion, deathsPerOneMillion = deathsPerOneMillion, totalTests=totalTests, testsPerOneMillion = testsPerOneMillion  )
     
 if __name__ == '__main__':
     app.run(debug=True)
