@@ -1,3 +1,10 @@
+
+.DS_Store
+
+.idea/
+
+__pycache__/
+
 *.log
 
 credentials.*
