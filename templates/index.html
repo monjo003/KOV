@@ -1,11 +1,64 @@
 <html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY" async="" defer="defer"></script>
+    <!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY" async="" defer="defer"></script> -->
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCMsGz7E808xWJk9AtDFlkULTwM5ww6gD0" async="" defer="defer"></script>
     <script src="{{ url_for('static', filename="chart.js")}}"></script>
   </head>
   <body>
-    <div id="total-conformed"> <h2> Total conformed cases in Ethiopia: {{ totalConf }} </h2> </div>
+    <table>
+      <tr>
+        <th>country</th>
+        <th>Blank</th> 
+      </tr>
+      <tr>
+        <td>Total cases</td>
+        <td>Smith</td>
+      </tr>
+      <tr>
+        <td>today's cases</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>total deaths</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>today's deaths</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Total recovered</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Active</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Critical</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Cases per one million</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Deaths per one million</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>total tests</td>
+        <td></td>
+      </tr>
+       <tr>
+        <td>tests per one million</td>
+        <td></td>
+      </tr>
+    
+    </table>
+
+    <div id="total-conformed"> <h2> Total conformed cases in Ethiopia: {{ CaseNo }} </h2> </div>
     <div id="regions_div" style="border: 1px solid #ccc"></div>
     <div id="chart_div" style="border: 1px solid #ccc"></div>
     <!-- <script src="api.py"></script> -->
