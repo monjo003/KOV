@@ -34,7 +34,7 @@ def home():
 
     # print(map_api_key)
 
-    return render_template('index.html', map_api_key = map_api_key, country = country, cases = cases, todayCases = todayCases, deaths = deaths, todayDeaths = todayDeaths, recovered = recovered, active = active, critical = critical, casesPerOneMillion = casesPerOneMillion, deathsPerOneMillion = deathsPerOneMillion, totalTests=totalTests, testsPerOneMillion = testsPerOneMillion  )
+    return render_template('index.html', token= "YEAHHHHHHHHHHHH!!!!!!! LETSS GOOOOOO!!!!", map_api_key = map_api_key, country = country, cases = cases, todayCases = todayCases, deaths = deaths, todayDeaths = todayDeaths, recovered = recovered, active = active, critical = critical, casesPerOneMillion = casesPerOneMillion, deathsPerOneMillion = deathsPerOneMillion, totalTests=totalTests, testsPerOneMillion = testsPerOneMillion  )
     
 if __name__ == '__main__':
     app.run(debug=True)
