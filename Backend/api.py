@@ -12,7 +12,7 @@ with open("credentials.json", "r") as f:
     map_api_key = my_dict["credentials"]["MAPS_API"]
 # print(map_api_key)    
 
-@app.route('/', methods=['GET'])
+@app.route('/main', methods=['GET'])
 def home():
    
     country = "ethiopia"
